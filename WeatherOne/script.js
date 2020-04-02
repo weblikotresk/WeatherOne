@@ -104,36 +104,6 @@ document.getElementById('location').onclick = geo;
 
 //slider
 // if rflag = false , then you can move right, else you cannot; 
-let left = 0;
-let rflag = false;
-let lflag = true;
-document.getElementsByClassName('right')[0].onclick = rightOffset;
-function rightOffset(){
-   if(rflag == false){
-      left = left - 100;
-
-      if(left < -1500){
-      rflag = true;
-      lflag = false;
-      }
-      lflag = false;
-      document.getElementById('hours').style.left = left + 'px';
-   }
-}
-document.getElementsByClassName('left')[0].onclick = leftOffset;
-function leftOffset(){
-   if(lflag == false){
-      left = left + 100;
-
-      if(left == 0){
-         lflag = true; 
-         rflag = false;
-      }
-      document.getElementById('hours').style.left = left + 'px';
-      rflag = false;
-
-   }
-}
 
 //up-down slider
 let uflag = true,
@@ -142,10 +112,213 @@ up = 0;
 window.onload = media;
 window.onresize = media;
 function media(){
-   if((window.matchMedia("(max-width: 1100px)").matches)){
+   if((window.matchMedia("(max-width: 450px)").matches)){
       let up = 0, uflag = false,
       dflag = true;
       document.getElementById('days').style.top = 0;
+      document.getElementById('days').style.left = 0;
+      document.getElementsByClassName('up')[0].onclick = leftOffset2;
+   //down = right, up = left;!!!!!!!
+      function leftOffset2(){
+         if(dflag == false){
+            up = up + 100;
+      
+            if(up == 0){
+            dflag = true;
+            uflag = false;
+            }
+            uflag = false;
+            document.getElementById('days').style.left = up + 'px';
+            console.log(up);
+         }
+      }
+      
+      document.getElementsByClassName('down')[0].onclick = rightOffset2;
+
+      function rightOffset2(){
+         if(uflag == false){
+            up = up - 100;
+
+            if(up < -800){
+            dflag = false;
+            uflag = true;
+            }
+            dflag = false;
+            document.getElementById('days').style.left = up + 'px';
+            console.log(up);
+         }
+      }
+      let left = 0;
+      let rflag = false;
+      let lflag = true;
+      document.getElementsByClassName('right')[0].onclick = rightOffset;
+      function rightOffset(){
+         if(rflag == false){
+            left = left - 100;
+
+            if(left < -2200){
+            rflag = true;
+            lflag = false;
+            }
+            lflag = false;
+            document.getElementById('hours').style.left = left + 'px';
+         }
+      }
+      document.getElementsByClassName('left')[0].onclick = leftOffset;
+      function leftOffset(){
+         if(lflag == false){
+            left = left + 100;
+
+            if(left == 0){
+               lflag = true; 
+               rflag = false;
+            }
+            document.getElementById('hours').style.left = left + 'px';
+            rflag = false;
+
+         }
+      }
+   }
+   else if((window.matchMedia("(max-width: 650px)").matches)){
+      let up = 0, uflag = false,
+      dflag = true;
+      document.getElementById('days').style.top = 0;
+      document.getElementById('days').style.left = 0;
+      document.getElementsByClassName('up')[0].onclick = leftOffset2;
+   //down = right, up = left;!!!!!!!
+      function leftOffset2(){
+         if(dflag == false){
+            up = up + 100;
+      
+            if(up == 0){
+            dflag = true;
+            uflag = false;
+            }
+            uflag = false;
+            document.getElementById('days').style.left = up + 'px';
+            console.log(up);
+         }
+      }
+      
+      document.getElementsByClassName('down')[0].onclick = rightOffset2;
+
+      function rightOffset2(){
+         if(uflag == false){
+            up = up - 100;
+
+            if(up < -600){
+            dflag = false;
+            uflag = true;
+            }
+            dflag = false;
+            document.getElementById('days').style.left = up + 'px';
+            console.log(up);
+         }
+      }
+      let left = 0;
+      let rflag = false;
+      let lflag = true;
+      document.getElementsByClassName('right')[0].onclick = rightOffset;
+      function rightOffset(){
+         if(rflag == false){
+            left = left - 100;
+
+            if(left < -2000){
+            rflag = true;
+            lflag = false;
+            }
+            lflag = false;
+            document.getElementById('hours').style.left = left + 'px';
+         }
+      }
+      document.getElementsByClassName('left')[0].onclick = leftOffset;
+      function leftOffset(){
+         if(lflag == false){
+            left = left + 100;
+
+            if(left == 0){
+               lflag = true; 
+               rflag = false;
+            }
+            document.getElementById('hours').style.left = left + 'px';
+            rflag = false;
+
+         }
+      }
+   }
+   else if((window.matchMedia("(max-width: 850px)").matches)){
+      let up = 0, uflag = false,
+      dflag = true;
+      document.getElementById('days').style.top = 0;
+      document.getElementById('days').style.left = 0;
+      document.getElementsByClassName('up')[0].onclick = leftOffset2;
+   //down = right, up = left;!!!!!!!
+      function leftOffset2(){
+         if(dflag == false){
+            up = up + 100;
+      
+            if(up == 0){
+            dflag = true;
+            uflag = false;
+            }
+            uflag = false;
+            document.getElementById('days').style.left = up + 'px';
+            
+         }
+      }
+      
+      document.getElementsByClassName('down')[0].onclick = rightOffset2;
+
+      function rightOffset2(){
+         if(uflag == false){
+            up = up - 100;
+
+            if(up < -400){
+            dflag = false;
+            uflag = true;
+            }
+            dflag = false;
+            document.getElementById('days').style.left = up + 'px';
+            console.log(up);
+         }
+      }
+      let left = 0;
+      let rflag = false;
+      let lflag = true;
+      document.getElementsByClassName('right')[0].onclick = rightOffset;
+      function rightOffset(){
+         if(rflag == false){
+            left = left - 100;
+
+            if(left < -1800){
+            rflag = true;
+            lflag = false;
+            }
+            lflag = false;
+            document.getElementById('hours').style.left = left + 'px';
+         }
+      }
+      document.getElementsByClassName('left')[0].onclick = leftOffset;
+      function leftOffset(){
+         if(lflag == false){
+            left = left + 100;
+
+            if(left == 0){
+               lflag = true; 
+               rflag = false;
+            }
+            document.getElementById('hours').style.left = left + 'px';
+            rflag = false;
+
+         }
+      }
+
+   }
+   else if((window.matchMedia("(max-width: 1100px)").matches)){
+      let up = 0, uflag = false,
+      dflag = true;
+      document.getElementById('days').style.top = 0;
+      document.getElementById('days').style.left = 0;
       document.getElementsByClassName('up')[0].onclick = leftOffset2;
    //down = right, up = left;!!!!!!!
       function leftOffset2(){
@@ -177,9 +350,70 @@ function media(){
             console.log(up);
          }
       }
-      
-   }
-   else{
+      let left = 0;
+      let rflag = false;
+      let lflag = true;
+      document.getElementsByClassName('right')[0].onclick = rightOffset;
+      function rightOffset(){
+         if(rflag == false){
+            left = left - 100;
+
+            if(left < -1600){
+            rflag = true;
+            lflag = false;
+            }
+            lflag = false;
+            document.getElementById('hours').style.left = left + 'px';
+         }
+      }
+      document.getElementsByClassName('left')[0].onclick = leftOffset;
+      function leftOffset(){
+         if(lflag == false){
+            left = left + 100;
+
+            if(left == 0){
+               lflag = true; 
+               rflag = false;
+            }
+            document.getElementById('hours').style.left = left + 'px';
+            rflag = false;
+
+         }
+      }
+
+
+   }else{
+      let left = 0;
+      let rflag = false;
+      let lflag = true;
+      document.getElementsByClassName('right')[0].onclick = rightOffset;
+      function rightOffset(){
+         if(rflag == false){
+            left = left - 100;
+
+            if(left < -1500){
+            rflag = true;
+            lflag = false;
+            }
+            lflag = false;
+            document.getElementById('hours').style.left = left + 'px';
+         }
+      }
+      document.getElementsByClassName('left')[0].onclick = leftOffset;
+      function leftOffset(){
+         if(lflag == false){
+            left = left + 100;
+
+            if(left == 0){
+               lflag = true; 
+               rflag = false;
+            }
+            document.getElementById('hours').style.left = left + 'px';
+            rflag = false;
+
+         }
+      }
+
       document.getElementById('days').style.left = 0;
       document.getElementsByClassName('down')[0].onclick = downOffset;
       function downOffset(){
