@@ -1,6 +1,6 @@
 /*font-family: 'Rubik', sans-serif;*/
 html{
-    background: url('img/trianglify-lowres3.png') no-repeat center / cover;
+    background: url('img/texture.jpg') repeat center / cover;
 }
 #weather{
     display: grid;
@@ -301,7 +301,7 @@ html{
     }
 }
 
-@media screen and (max-width:760px){
+@media screen and (max-width:850px){
     
     #display{
         margin-bottom: 100px;
@@ -314,18 +314,18 @@ html{
        position: static;
     }
     .slider, .days_slider{
-        width: 400px;
+        width: 500px;
     }
     .app_temp{margin-bottom: 50px;}
     
 
 }
-@media screen and (max-width:560px){
+@media screen and (max-width:650px){
     .slider, .days_slider{
-        width: 200px;
+        width: 300px;
     }
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:450px){
     .slider, .days_slider{
         width: 100px;
     }
