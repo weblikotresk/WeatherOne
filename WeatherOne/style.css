@@ -1,0 +1,337 @@
+/*font-family: 'Rubik', sans-serif;*/
+html{
+    background: url('img/trianglify-lowres3.png') no-repeat center / cover;
+}
+#weather{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr repeat(6, 2fr);/*пофиксить размеры*/
+    grid-gap: 2px;
+    grid-template-areas:
+    'display display display display display display days'
+    'display display display display display display days'
+    'display display display display display display days'
+    'display display display display display display days'
+    'slider_wrap slider_wrap slider_wrap slider_wrap slider_wrap slider_wrap days';
+
+    margin: 5% auto;
+    padding: 25px;
+    width: 900px;
+    height: 600px;
+    border-radius: 5px;
+
+    background: url('img/trianglify-lowres3.png') no-repeat center / cover;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.31);
+}
+
+#days{
+
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: column;
+    position: relative;
+    transition: .4s all ease;
+}
+#display{
+    grid-area: display;
+    padding-left: 10px;
+}
+.slider_wrap{
+    grid-area: slider_wrap;
+    position: relative;
+}
+.slider{
+    display: flex;
+    width: 700px;
+    overflow: hidden;
+    margin:0 auto ;
+}
+#hours{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: .4s all ease;
+}
+#hours > div, .day{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.hour{
+    width: 100px;
+    float: left;
+}
+#hours::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.right{
+    right: -10px;
+    transform: rotate(180deg);
+    top: 50%;
+}
+.left{
+    left: -10px;
+    top: 50%;
+}
+.up{
+    left: 45px;
+    top: -20px;
+    transform: rotate(90deg);
+}
+.down{
+    left: 45px;
+    bottom: -25px;
+    transform: rotate(-90deg);
+}
+/*==========================DAYS=================================*/
+.days_wrap{
+    grid-area: days;
+    height: inherit;/*?*/
+    position: relative;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.day{
+    padding-bottom: 1.6px;
+
+}
+.days_slider{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+}
+.button{
+     position: absolute;
+    display: block;
+    width: 25px;
+    z-index: 3;
+
+    fill: rgba(255, 255, 255, 0.8);
+}
+.button:hover{
+    fill: #fff;
+    cursor: pointer;
+}
+/*=======================DISPLAY=======================================*/
+#display{
+    position: relative;
+}
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 1.4rem;
+}
+.details > div{
+    margin: 0 10px 15px 0;
+    width: 40%;
+}
+
+/*condition*/
+.condition{
+    font-size: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+.cond_text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/*wind*/
+.wind{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 55%;
+    right: 50%;
+    font-size: 1.2rem;
+}
+.wind_speed{
+    margin-bottom: 15px;
+}
+.wind_dir{
+    height: 40px;
+    transform: rotate(45deg);
+    margin-bottom:-35px;
+    fill: white;
+}
+/* =============================location================================== */
+#location{
+    padding: 5px;
+    display: flex;
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.74);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#location:hover{
+    background-color: #59abc2;
+    color: #fff;
+    transition: .2s ease all;
+    border-color: #59abc2;
+}
+.location_img{
+    height: 15px;
+    margin-right: 10px;
+    fill: white;
+}
+
+.location_txt{
+    margin: 0;
+}
+
+
+/*----------------TEMPERATURE-----------------------------------*/
+
+.temperature{
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.temp_val{
+    width: fit-content;
+}
+.icon{
+    width: 70px;
+    display: block;
+}
+
+/*settings*/
+
+.settings_icon{
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    fill: #fff;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+.settings_icon:hover{
+    transform: rotate(90deg);
+}
+.app_temp{
+    margin-bottom: 100px;
+}
+/*==================================HOURS=========================================*/
+.sky{
+    width: 70px;
+    margin: 0 auto;
+    display: block;
+}
+
+.temp{
+    margin-bottom: 10px;
+}
+.time, .date{
+    font-weight: 100;
+}
+/* say so */
+
+@media screen and (max-width:1100px){
+    #weather{
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr repeat(5, 2fr);
+        grid-template-areas:
+        'display display display display display display'
+        'display display display display display display'
+        'display display display display display display'
+        'display display display display display display'
+        'slider_wrap slider_wrap slider_wrap slider_wrap slider_wrap slider_wrap'
+        'days days days days days days';
+        height: auto;
+        text-align: center;
+        width: auto;
+    }
+    body, #weather{
+        margin: 0;
+    }
+    .icon{
+        margin:0 auto;
+    }
+    .details{
+        justify-content: center;
+    }
+    .wind{
+        bottom: 14%;
+        right: 46%;
+    }
+    #days{
+        flex-direction: row;
+    }
+    .days_slider{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .day{
+        width: 100px;
+    
+    }
+    .days_wrap{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    .right{
+        right: 40px;
+    }
+    .left{
+        left: 40px;
+    }
+    .up{
+        top: 50%;
+        transform: rotate(0);
+    }
+    .down{
+         transform:rotate(180deg);
+        top:50%; 
+        right: 40px;
+        left: unset;
+    }
+}
+
+@media screen and (max-width:760px){
+    
+    #display{
+        margin-bottom: 100px;
+    }
+
+    .details > div{
+        width: 50%;
+    }
+    .wind{
+       position: static;
+    }
+    .slider, .days_slider{
+        width: 400px;
+    }
+    .app_temp{margin-bottom: 50px;}
+    
+
+}
+@media screen and (max-width:560px){
+    .slider, .days_slider{
+        width: 200px;
+    }
+}
+@media screen and (max-width:400px){
+    .slider, .days_slider{
+        width: 100px;
+    }
+}
+
+
+
+
+

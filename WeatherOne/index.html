@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>weather</title>
+</head>
+<body>
+    <div id="weather">
+        <div class="days_wrap">
+
+            <svg version="1.1" id="Capa_1" class="up button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 264.798 264.798" style="enable-background:new 0 0 264.798 264.798;" xml:space="preserve" fill = '#fff'>
+    <g>
+        <path id="Arrow_Drop_Left" d="M183.865,3.479L63.839,123.77c-4.74,4.752-4.74,12.439,0,17.191l0,0l0,0l119.942,120.195
+            c7.627,7.94,21.029,1.949,20.728-8.83V12.405C204.798,1.662,191.493-4.16,183.865,3.479z M89.56,132.359l90.829-91.021v182.055
+            L89.56,132.359z"/>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+            </svg> 
+
+            <div class="days_slider">
+
+                <div id="days">
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                    <div class="day">
+                        <img src="" alt="" class="sky">
+                        <div class="temp">waiting...</div>
+                        <div class="date">waiting...</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <svg version="1.1" id="Capa_1" class="down button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 264.798 264.798" style="enable-background:new 0 0 264.798 264.798;" xml:space="preserve" fill = '#fff'>
+    <g>
+        <path id="Arrow_Drop_Left" d="M183.865,3.479L63.839,123.77c-4.74,4.752-4.74,12.439,0,17.191l0,0l0,0l119.942,120.195
+            c7.627,7.94,21.029,1.949,20.728-8.83V12.405C204.798,1.662,191.493-4.16,183.865,3.479z M89.56,132.359l90.829-91.021v182.055
+            L89.56,132.359z"/>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+            </svg> 
+
+        </div>
+
+        <div id="display">
+            <div class="display_wrap">
+                <div id="location">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.13 362.13" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 362.13 362.13" class='location_img'>
+                        <g>
+                        <path d="m181.065,0c-75.532,0-136.981,61.45-136.981,136.981 0,31.155 21.475,76.714 63.827,135.411 30.619,42.436 60.744,75.965 62.011,77.372l11.144,12.367 11.144-12.367c1.267-1.406 31.392-34.936 62.011-77.372 42.352-58.697 63.827-104.255 63.827-135.411-0.001-75.531-61.451-136.981-136.983-136.981zm0,316.958c-37.733-44.112-106.981-134.472-106.981-179.977 0-58.989 47.991-106.981 106.981-106.981s106.981,47.992 106.981,106.981c0.001,45.505-69.248,135.865-106.981,179.977z"/>
+                        <circle cx="181.065" cy="136.982" r="49.696"/>
+                        </g>
+                    </svg>
+                    <h4 class="location_txt">Your location</h4>
+                </div>
+
+                <div class="condition"> </div>
+
+                <div class="temperature">
+                    <span class="temp_val">waiting...</span> 
+                    
+                </div>
+                
+                <div class="app_temp">waiting...</div>
+                
+                <div class="details">
+                    <div id="sunr">Sunrise: waiting...</div>
+                    <div id="suns">Sunset: waiting...</div>
+                    <div id="pres">Pressure: waiting...</div>
+                    <div id="hum">Humidity: waiting...</div>
+                </div>
+                
+                <div class="wind">
+                    <h3 class="wind_headline">Wind:</h3>
+                    <div class="wind_speed">waiting...</div>
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve" class = 'wind_dir'>
+                    <g>
+                        <path d="M128.835,297c-4.015,0-7.646-2.395-9.227-6.092L1.295,13.976C-0.317,10.202,0.531,5.827,3.436,2.93
+                            c2.907-2.898,7.285-3.734,11.052-2.112l275.956,118.729c3.715,1.599,6.107,5.271,6.068,9.314c-0.04,4.044-2.504,7.67-6.248,9.194
+                            L182.059,182.13l-43.921,108.598c-1.52,3.758-5.15,6.233-9.203,6.273C128.901,297,128.868,297,128.835,297z M29.609,29.17
+                            l98.974,231.661l36.462-90.156c1.017-2.513,3.006-4.508,5.517-5.53L260.5,128.51L29.609,29.17z"/>
+                    </g>
+                    </svg>
+                </div>
+                <!-- settings button -->
+                <!-- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 21.589 21.589" style="enable-background:new 0 0 21.589 21.589;" xml:space="preserve" class= "settings_icon">
+                    <g>
+                        <path d="M18.622,8.371l-0.545-1.295c0,0,1.268-2.861,1.156-2.971l-1.679-1.639c-0.116-0.113-2.978,1.193-2.978,1.193l-1.32-0.533
+                        c0,0-1.166-2.9-1.326-2.9H9.561c-0.165,0-1.244,2.906-1.244,2.906L6.999,3.667c0,0-2.922-1.242-3.034-1.131L2.289,4.177
+                        C2.173,4.29,3.507,7.093,3.507,7.093L2.962,8.386c0,0-2.962,1.141-2.962,1.295v2.322c0,0.162,2.969,1.219,2.969,1.219l0.545,1.291
+                        c0,0-1.268,2.859-1.157,2.969l1.678,1.643c0.114,0.111,2.977-1.195,2.977-1.195l1.321,0.535c0,0,1.166,2.898,1.327,2.898h2.369
+                        c0.164,0,1.244-2.906,1.244-2.906l1.322-0.535c0,0,2.916,1.242,3.029,1.133l1.678-1.641c0.117-0.115-1.22-2.916-1.22-2.916
+                        l0.544-1.293c0,0,2.963-1.143,2.963-1.299v-2.32C21.59,9.425,18.622,8.371,18.622,8.371z M14.256,10.794
+                        c0,1.867-1.553,3.387-3.461,3.387c-1.906,0-3.461-1.52-3.461-3.387s1.555-3.385,3.461-3.385
+                        C12.704,7.41,14.256,8.927,14.256,10.794z"/>
+                    <g>
+                </svg> -->
+            </div>
+        </div>
+
+        <div class="slider_wrap">
+
+            <svg version="1.1" id="Capa_1" class="right button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 264.798 264.798" style="enable-background:new 0 0 264.798 264.798;" xml:space="preserve" fill = '#fff'>
+<g>
+	<path id="Arrow_Drop_Left" d="M183.865,3.479L63.839,123.77c-4.74,4.752-4.74,12.439,0,17.191l0,0l0,0l119.942,120.195
+		c7.627,7.94,21.029,1.949,20.728-8.83V12.405C204.798,1.662,191.493-4.16,183.865,3.479z M89.56,132.359l90.829-91.021v182.055
+		L89.56,132.359z"/>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+            </svg>
+
+            <div class="slider">
+
+                <div id="hours">
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    <div class="hour">
+                        <div class="possibility"></div>
+                            <img src="" alt="" class="sky">
+                            <div class="temp">waiting...</div>
+                            <div class="time">waiting...</div>
+                    </div>
+                    
+                    
+                </div> 
+                
+            </div>
+
+            <svg version="1.1" id="Capa_1" class="left button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+	 viewBox="0 0 264.798 264.798" style="enable-background:new 0 0 264.798 264.798;" xml:space="preserve" fill = '#fff'>
+<g>
+	<path id="Arrow_Drop_Left" d="M183.865,3.479L63.839,123.77c-4.74,4.752-4.74,12.439,0,17.191l0,0l0,0l119.942,120.195
+		c7.627,7.94,21.029,1.949,20.728-8.83V12.405C204.798,1.662,191.493-4.16,183.865,3.479z M89.56,132.359l90.829-91.021v182.055
+		L89.56,132.359z"/>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+            </svg>
+            
+        </div>
+        
+    </div>
+    
+    
+    <script src="moment.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
