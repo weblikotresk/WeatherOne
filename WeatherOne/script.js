@@ -152,6 +152,7 @@ function media(){
       let rflag = false;
       let lflag = true;
       document.getElementsByClassName('right')[0].onclick = rightOffset;
+      document.getElementById('hours').style.left = 0;
       function rightOffset(){
          if(rflag == false){
             left = left - 100;
@@ -218,6 +219,7 @@ function media(){
       let left = 0;
       let rflag = false;
       let lflag = true;
+      document.getElementById('hours').style.left = 0;
       document.getElementsByClassName('right')[0].onclick = rightOffset;
       function rightOffset(){
          if(rflag == false){
@@ -285,6 +287,7 @@ function media(){
       let left = 0;
       let rflag = false;
       let lflag = true;
+      document.getElementById('hours').style.left = 0;
       document.getElementsByClassName('right')[0].onclick = rightOffset;
       function rightOffset(){
          if(rflag == false){
@@ -353,6 +356,7 @@ function media(){
       let left = 0;
       let rflag = false;
       let lflag = true;
+      document.getElementById('hours').style.left = 0;
       document.getElementsByClassName('right')[0].onclick = rightOffset;
       function rightOffset(){
          if(rflag == false){
@@ -386,6 +390,7 @@ function media(){
       let left = 0;
       let rflag = false;
       let lflag = true;
+      document.getElementById('hours').style.left = 0;
       document.getElementsByClassName('right')[0].onclick = rightOffset;
       function rightOffset(){
          if(rflag == false){
